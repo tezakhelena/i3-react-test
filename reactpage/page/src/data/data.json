@@ -1,0 +1,26 @@
+[
+    {
+        "naslov": "Cruelty free web page"
+    },
+    {
+        "id": 1,
+        "naziv": "Hello world",
+        "tekst": "We are the leading organisation working to end animal experiments worldwide."
+    },
+    {
+        "id": 2,
+        "naziv": "What you can do?",
+        "tekst": "Millions of animals are suffering in animal tests around the world right now. They urgently need our help. You can make a difference."
+    },
+    {
+        "id": 3,
+        "naziv": "Donate",
+        "tekst": "Make a gift to animals worldwide."
+    },
+    {
+        "id": 4,
+        "naziv": "Raise money for animals",
+        "tekst": "Be a hero for animals by fundraising."
+    }
+]
+

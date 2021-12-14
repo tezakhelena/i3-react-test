@@ -1,0 +1,79 @@
+$color: #1f5156;
+$color2: #c52d2d;
+
+.slider{
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.image{
+  margin-top: -20%;
+  width: 800px;
+  height: 500px;
+  border-radius: 10px;
+}
+
+.right-arrow{
+  position: absolute;
+  top: 40%;
+  right: 100px;
+  font-size: 3rem;
+  color: $color;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.left-arrow{
+  position: absolute;
+  top: 40%;
+  left: 100px;
+  font-size: 3rem;
+  color: $color;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+
+.child {
+    display: grid;
+    max-width: 960px;
+    margin: 0 auto;
+    display: grid;
+    grid-auto-rows: minmax(50px, auto);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+}
+
+h2{
+  margin-top: 0%;
+  color: $color2;
+}
+
+@media screen and (max-width: 800px) {
+  .child {
+    display: none;
+  }
+}

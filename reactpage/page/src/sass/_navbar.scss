@@ -1,0 +1,132 @@
+$main-color: #c52d2d;
+$text-color: #fff;
+$active-color: #ffdd40;
+$background-color: #1f5156;
+
+.navbar {
+    background-color: $main-color;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    max-width: 1500px;
+  }
+  
+  .nav-logo {
+    color: $active-color;
+    align-items: center;
+    margin-left: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    flex-grow: 1;
+    font-weight: bold;
+  }
+  
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    text-align: center;
+    margin-right: 2rem;
+  }
+  
+  .nav-links {
+    color: $text-color;
+    text-decoration: none;
+    padding: 0.5rem 5rem;
+    text-align: center;
+    justify-content: center;
+    height: 100%;
+    border-bottom: 5px solid transparent;
+  }
+
+ 
+  .nav-item {
+    margin-left: 66px;
+    color: $text-color;
+    letter-spacing: px;
+    line-height: 40px;
+    font-weight: bold;
+    font-size: 20px;
+
+
+  }
+  
+  .nav-item:after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0;
+    background: transparent;
+    transition: width 0.7s ease, background-color 0.5s ease;
+  }
+  
+  .nav-item:hover:after {
+    width: 100%;
+    background: $active-color;
+  }
+
+  
+  .nav-item .active {
+    color: $active-color;
+    border: 1px solid $active-color;
+  }
+  
+  .nav-icon {
+    display: none;
+  }
+  
+  @media screen and (max-width: 960px) {
+    .nav-menu {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      border-top: 1pxsolid $text-color;
+      position: absolute;
+      top: 80px;
+      left: -110%;
+      opacity: 1;
+      transition: all 0.5s ease;
+    }
+  
+    .nav-menu.active {
+      background: $background-color;
+      left: 0px;
+      opacity: 1;
+      transition: all 0.5s ease;
+      z-index: 1;
+    }
+    .nav-item .active {
+      color: $active-color;
+      border: none;
+    }
+    .nav-links {
+      padding: 2rem;
+      width: 100%;
+      display: table;
+    }
+  
+    .nav-icon {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(-100%, 60%);
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: $active-color;
+    }
+  }
+  
